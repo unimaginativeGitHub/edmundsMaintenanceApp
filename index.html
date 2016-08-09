@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='utf-8'>
+
+    <title>Car Maintenance Guide</title>
+
+    <!-- bootstrap stylesheet and app specific style sheet -->
+    <link href='bootstrap/css/bootstrap.min.css' rel='stylesheet'>
+    <link href='style.css' rel='stylesheet'>
+
+  </head>
+  <body>
+
+    <div id='page-container'>
+      <div id='spec-select-panel' class='panel panel-default'>
+
+        <div class='panel-heading'>
+          <h4>Car Maintenance Guide</h4>
+        </div>
+
+        <div id='spec-selector-body' class='panel-body'>
+
+          <div class='well well-sm'>
+            <p>Year</p>
+            <div class='pull-right'>
+              <select id='yearSelector' class='specSelectors' disable>
+                <option value='' disabled selected>Select Year</option>
+              </select>
+            </div>
+          </div>
+
+          <div class='well well-sm'>
+            <p>Make</p>
+            <div class='pull-right'>
+              <select id='makeSelector' class='specSelectors' disabled>
+                <option value='' disabled selected>Select Make</option>
+              </select>
+            </div>
+          </div>
+
+          <div class='well well-sm'>
+            <p>Model</p>
+            <div class='pull-right'>
+              <select id='modelSelector' class='specSelectors' disabled>
+                <option value='' disabled selected>Select Model</option>
+              </select>
+            </div>
+          </div>
+
+          <div class='well well-sm'>
+            <p>Trim</p>
+            <div class='pull-right'>
+              <select id='trimSelector' class='specSelectors' disabled>
+                <option value='' disabled selected>Select Trim</option>
+              </select>
+            </div>
+          </div>
+
+          <div class='well well-sm'>
+            <p>Engine</p>
+            <div class='pull-right'>
+              <select id='engineSelector' class='specSelectors' disabled>
+                <option value='' disabled selected>Select Engine</option>
+              </select>
+            </div>
+          </div>
+
+          <div class='well well-sm'>
+            <p>Transmission</p>
+            <div class='pull-right'>
+              <select id='transmissionSelector' class='specSelectors' disabled>
+                <option value='' disabled selected>Select Transmission</option>
+              </select>
+            </div>
+          </div>
+
+          <div id='mile-input' class='well well-sm'>
+              <input
+                id='mileageInput'
+                class='form-control'
+                type='number'
+                name='mileage'
+                placeholder='Enter Vehicle Mileage'
+                min='0'
+                max='300000'
+                step='10 well-sm'>
+          </div>
+
+          <div id='zip-input' class='well well-sm'>
+              <input
+                id='zipInput'
+                class='form-control'
+                type='number'
+                name='zip'
+                placeholder='Enter Zip Code'
+                min='0'
+                step='1 well-sm'>
+          </div>
+
+          <div>
+            <button type='button' class='btn btn-default' id='getMaintenance'>
+              <span
+                class='glyphicon glyphicon-wrench'
+                aria-hidden='true'>
+              </span> Get Maintenance Information
+            </button>
+          </div>
+
+        </div>
+
+        <div class='panel-footer'>
+          <a href='http://developer.edmunds.com'>Powered by the Edmunds API</a>
+        </div>
+
+      </div>
+
+      <div id='maintenance-panel' class='panel panel-default'>
+
+        <div class='panel-heading'>
+          <h4>Maintenance Schedule</h4>
+
+          <span class='pull-right'>
+            <button type='button' class='btn btn-default' id='btnClearSelections'>
+              <span
+                class='glyphicon glyphicon-refresh'
+                aria-hidden='true'>
+              </span> Clear Selections
+            </button>
+          </span>
+        </div>
+
+        <div id='maintenance-body' class='panel-body'>
+
+          <div id='responseContent'>
+            <h4><i>Please make your vehicle specification selections<i></h4>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- jQuery -->
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js'></script>
+    <!-- bootstrap and app actions -->
+    <script src='bootstrap/js/bootstrap.min.js'></script>
+    <script type='text/javascript' src='actions.js'></script>
+  </body>
+</html>

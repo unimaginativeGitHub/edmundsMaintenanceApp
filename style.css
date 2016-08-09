@@ -1,0 +1,41 @@
+body {
+  padding: 20px;
+}
+
+#page-container {
+  min-width: 900px;
+}
+
+#spec-select-panel {
+  width: 35%;
+  display: inline-block;
+}
+
+#maintenance-panel {
+  display: inline-block;
+  float: right;
+  width: 63%;
+}
+
+#spec-selector-body .specSelectors {
+  font-size: 14px;
+}
+
+#spec-selector-body p {
+  line-height: 0px;
+  display: inline;
+  font-size: 14px;
+}
+
+#btnClearSelections {
+  margin-top: -60px;
+}
+
+.pull-right {
+  float: right;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
